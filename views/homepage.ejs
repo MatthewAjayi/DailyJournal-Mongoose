@@ -1,0 +1,16 @@
+<%- include("header") -%>
+        <h1>Home</h1>
+        <p><%= homeParagraph %> </p>
+        
+         <% for(let i = 0; i < postTitle.length; i++) { %>
+                <div class="">
+                <h2><%= postTitle[i].title %> </h2>
+                <%if (post[i].entry.length > 10) { %>
+                    <p><%= post[i].entry.substring(0,100) %> <a href="post/<%= postTitle[i].title %>">...Read More</a> </p>
+                    <% } else { %>
+                        <p><%= post[i].entry %>  </p>
+                    <% } %> 
+            </div>
+        <% } %>  
+        
+<%- include("footer") -%>

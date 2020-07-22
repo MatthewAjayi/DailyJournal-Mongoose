@@ -1,0 +1,16 @@
+<%- include("header") -%>
+    <h1>Compose</h1>
+    <label for="">Title</label>
+    <form action="/" method="POST">
+    <div class="titleBox">
+        <input type="text" name="postTitle">
+    </div>
+    <label for="">Journal Entry</label>
+    <div class="entryBox">
+        <textarea name="postVal" id="" cols="30" rows="10"></textarea>
+    </div>
+    <div>
+        <button type="submit" class="btn btn-outline-dark">Publish</button>
+    </div>
+    </form>
+<%- include("footer") -%>
