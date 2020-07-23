@@ -76,7 +76,6 @@ app.get('/about', function (req, res) {
 // Route to full post page
 app.get('/post/:postTitle', function (req, res) {
 	let format = req.params.postTitle;
-	let x = postTitle.includes(format);
 
 	JournalEntry.findOne({ title: format }, function (err, foundList) {
 		// find value in db and render if found
